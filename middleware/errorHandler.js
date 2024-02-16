@@ -1,4 +1,4 @@
-const {Constants} = require("../constants");
+const {Constants} = require("../middleware/Constants");
 const errorHandler  = (err,req,res,next) => {
     const StatusCode = res.StatusCode ? res.StatusCode :500;
     switch(StatusCode){

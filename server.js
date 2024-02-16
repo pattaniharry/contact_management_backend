@@ -1,9 +1,10 @@
-const {Constants} = require("../constants");
+
 const express = require("express"); 
 const errorHandler = require("./middleware/errorHandler");
+const connectDB = require("./config/dbconnections");
 const dotenv = require("dotenv").config();/*dot env is a middle ware used to connect and env file which is used to deifne PORT and stuff  */
 
-
+connectDB();
 
 const app = express();
 const port = process.env.PORT || 5000 ;
